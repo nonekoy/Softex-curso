@@ -15,6 +15,8 @@ int main(){
     for (i=0; i<num; i++){
 		printf("%i  ",pnt[i]);
 	}
-    
+    free(pnt);
+    printf("\nApos liberar espaco:  ");
+    printf("%d", pnt);
     return 0;
 }
