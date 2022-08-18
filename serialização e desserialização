@@ -1,0 +1,88 @@
+nota = esse codigo todo não é de minha autoria, créditos= https://www.devmedia.com.br/use-a-serializacao-em-java-com-seguranca/29012
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class WriteObject{
+
+	public static void main (String args[]) {
+
+	 /*
+	 * Criamos o objeto Address na memória e setamos os valores
+	 * de seus atributos
+	 * */
+	   Address address = new Address();
+	   address.setStreet("wall street");
+	   address.setCountry("united states");
+	   ///////////////////////////////////////////////
+
+	   try{
+
+		/*
+		 * A Classe FileOutputStream é responsável por criar
+		 * o arquivo fisicamente no disco, assim poderemos realizar a
+		 * escrita neste.
+		 * */
+		FileOutputStream fout = new FileOutputStream("c:\\address.ser");
+
+		/*
+		 * A Classe ObjectOutputStream escreve os objetos no FileOutputStream
+		 * */
+		ObjectOutputStream oos = new ObjectOutputStream(fout);
+
+		/*
+		 * Veja aqui a mágica ocorrendo: Estamos gravando um objeto
+		 * do tipo Address no arquivo address.ser. Atenção: O nosso
+		 * objeto Address que está sendo gravado, já é gravado de forma
+		 * serializada
+		 * */
+		oos.writeObject(address);
+
+		oos.close();
+		System.out.println("Done");
+
+	   }catch(Exception ex){
+		   ex.printStackTrace();
+	   }
+	}
+}
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class ReadObject{
+
+   public static void main (String args[]) {
+
+	   /*
+	    * Apenas criamos o objeto address sem instanciá-lo
+	    * pois pegaremos a instância do arquivo address.ser
+	    * */
+	   Address address;
+
+	   try{
+
+		   /*
+		    * Responsável por carregar o arquivo address.ser
+		    * */
+		   FileInputStream fin = new FileInputStream("c:\\address.ser");
+
+		   /*
+		    * Responsável por ler o objeto referente ao arquivo
+		    * */
+		   ObjectInputStream ois = new ObjectInputStream(fin);
+
+		   /*
+		    * Aqui a mágica é feita, onde os bytes presentes no arquivo address.ser
+		    * são convertidos em uma instância de Address.
+		    * */
+		   address = (Address) ois.readObject();
+		   ois.close();
+
+		   System.out.println(address);
+
+	   }catch(Exception ex){
+		   ex.printStackTrace();
+	   }
+   }
+}
