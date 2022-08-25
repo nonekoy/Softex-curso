@@ -1,0 +1,3 @@
+Eu tentei usar IDE's para programar antes, usei o visualg e o devc++, ambos são ótimos para com seus objetivos, mas o que eu gostei de usar e me senti confortável foi o VScode.
+Ele me permitiu que modificasse as cores, o jeito que eu programo e não preciso trocar de IDE's ou configurações para mudar a linguagem que estou usando.
+Sendo muito versátil como a atividade comentou.
