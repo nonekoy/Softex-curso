@@ -1,0 +1,8 @@
+os padrões de projeto foram uma ideia antiga, christopher Alexandre foi o primeiro a definir o que seria um padrão de projeto, classificando ele como uma regra de três, 
+problema, solução e contexto aplicável.
+existem 3 tipos de padrão criacionais, estruturais e comportamentais, cada um tendo um jeito de análise. Temos o metodo construtor, sendo muito utilizado por arquitetos, 
+consiste na criação do projeto de baixo para cima, pois não se constrói uma casa pelo teto, e também temos o método protótipo, onde fazemos uma versão mais simples e prática
+ do nosso objetivo final, para checarmos a funcionalidade dele, ambos tem sua vantagem, quando se constrói primeiro a base e depois as partes de cima, podemos ter problemas 
+ quando algo da base não condiz com o resto do projeto, atrapalhando na adaptabilidade, já o método do protótipo, é um pouco mais demorado, pois você tem que criar algo 
+ bem mais simples, porém é melhor de visualizar, por exemplo quando vamos fazer uma construção grande e montamos uma maquete pra visualização dela no todo, fica graficamente 
+ mais fácil de acompanhar.
