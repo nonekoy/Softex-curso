@@ -1,0 +1,6 @@
+metodos a serem utilizados
+
+loop(for, while)
+pop
+length
+array
