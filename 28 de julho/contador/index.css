@@ -1,0 +1,33 @@
+button{
+    background-color: #381cd5;
+    border: 40px none;
+    color: rgb(0, 0, 0);
+    padding: 25px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 56px;
+    border-radius: 37px;
+    font-weight:900;    
+}
+#central{
+    display: flexbox;
+    align-items: center;
+    justify-content:space-between 220px;
+    margin-top: 40px;
+    margin-left: 150px;
+    
+}
+
+h1{
+    font-size: 94px;
+    align-content: center;
+    margin-right: 90px;
+    
+    
+}
+span{
+    font-size: 50px;
+    margin-left: 100px;
+}
+
