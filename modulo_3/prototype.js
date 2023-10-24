@@ -46,7 +46,7 @@ class Aplicacao {
             new Moto("Sport", "Honda", "Azul", 2, 600),
             new Moto("Cruiser", "Harley-Davidson", "Preto", 2, 1200),
             new Moto("Pop 100", "Honda", "Branca", 2, 110),
-            new Carro ("Civid", "Renault", "Prata", 4, 3)
+            new Carro ("Civid", "Renault", "Prata", 4, 4)
         ];
 
         return veiculos;
