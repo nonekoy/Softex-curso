@@ -1,0 +1,47 @@
+create database biblioteca;
+
+use biblioteca;
+
+-- Tabela Autor
+CREATE TABLE Autor (
+    ID_Autor INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Nacionalidade VARCHAR(50)
+);
+
+-- Tabela Livro
+CREATE TABLE Livro (
+    ID_Livro INT PRIMARY KEY,
+    Titulo VARCHAR(255),
+    ISBN VARCHAR(20),
+    Ano_Publicacao INT,
+    ID_Autor INT,
+    FOREIGN KEY (ID_Autor) REFERENCES Autor(ID_Autor)
+);
+
+-- Tabela Usuario
+CREATE TABLE Usuario (
+    ID_Usuario INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Endereco VARCHAR(255)
+);
+
+-- Tabela Emprestimo
+CREATE TABLE Emprestimo (
+    ID_Emprestimo INT PRIMARY KEY,
+    Data_Emprestimo DATE,
+    Data_Prevista_Devolucao DATE,
+    ID_Usuario INT,
+    ID_Livro INT,
+    FOREIGN KEY (ID_Usuario) REFERENCES Usuario(ID_Usuario),
+    FOREIGN KEY (ID_Livro) REFERENCES Livro(ID_Livro)
+);
+
+-- Tabela Devolucao
+CREATE TABLE Devolucao (
+    ID_Devolucao INT PRIMARY KEY,
+    Data_Devolucao DATE,
+    Multa DECIMAL(10, 2),
+    ID_Emprestimo INT,
+    FOREIGN KEY (ID_Emprestimo) REFERENCES Emprestimo(ID_Emprestimo)
+);
