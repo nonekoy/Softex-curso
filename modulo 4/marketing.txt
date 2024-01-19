@@ -1,0 +1,30 @@
+SELECT * FROM Transacoes;
+SELECT 
+    ID AS ID_Transacao, 
+    Data, 
+    Valor, 
+    ...
+FROM Transacoes;
+SELECT * FROM Transacoes WHERE Valor > 100.00
+SELECT * FROM Transacoes ORDER BY Valor DESC;
+
+SELECT 
+    AVG(Valor) AS Media_Valor,
+    MAX(Valor) AS Valor_Maximo,
+    MIN(Valor) AS Valor_Minimo,
+    COUNT(*) AS Numero_Total
+FROM Transacoes;
+
+SELECT 
+    Produto, 
+    AVG(Valor) AS Media_Valor_Por_Produto
+FROM Transacoes 
+GROUP BY Produto;
+
+SELECT 
+    Categoria, 
+    COUNT(*) AS Quantidade_Total, 
+    SUM(Valor) AS Valor_Total, 
+    AVG(Valor) AS Media_Valor_Por_Transacao
+FROM Produtos
+GROUP BY Categoria;
